@@ -5,6 +5,9 @@ pipeline {
             args '-v /root/.m2:/root/.m2'
         }
     }
+    tools{
+        'org.jenkinsci.plugins.docker.commons.tools.DockerTool' '18.09'
+    }
     stages {
         stage('Build') {
             steps {
